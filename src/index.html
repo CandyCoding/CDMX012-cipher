@@ -4,11 +4,26 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <div id="root" class="top">
+      <h1>Caesar Cipher</h1>
+      <p>Codifica tus mensajes</p>
     </div>
+    <!--Caja de texto a codificar-->
+    <section>
+      <form class="cajita">
+          <label> Escribe tu mensaje aquí</label>
+          <input type="textarea" id="plainText" placeholder="..."> <br>
+          <label> Ahora selecciona el desplazamiento </label>
+          <input type="number" id="offset" min="0" max="33"> <br>
+          <button type="button" id="encodeBtn"> Codificar </button>
+          <button type="button" id= "decodeBtn"> Decodificar</button><br>
+          <h2 id="tuMensajeCodificado"> </h2> 
+      </form>
+  </section>
     <script src="index.js" type="module"></script>
   </body>
 </html>
