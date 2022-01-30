@@ -2,28 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Arcano</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root" class="top">
-      <h1>Caesar Cipher</h1>
-      <p>Codifica tus mensajes</p>
-    </div>
+    <header id="root" class="top">
+      <h1>✨ ARCANO ✨</h1>
+      <h2>Codifica tus mensajes</h2><br>
+    </header>
+    <main>
     <!--Caja de texto a codificar-->
-    <section>
-      <form class="cajita">
-          <label> Escribe tu mensaje aquí</label>
-          <input type="textarea" id="plainText" placeholder="..."> <br>
-          <label> Ahora selecciona el desplazamiento </label>
-          <input type="number" id="offset" min="0" max="33"> <br>
-          <button type="button" id="encodeBtn"> Codificar </button>
-          <button type="button" id= "decodeBtn"> Decodificar</button><br>
-          <h2 id="tuMensajeCodificado"> </h2> 
-      </form>
-  </section>
+    <section class= "bienvenida">
+      <p>Bienvenvenidx a esta herramienta basada en el Cifrado César, una técnica antigua de encriptación basada en reemplazar la letra asignada por aquella que se encuentre en la poscición que se indique con su número de dezplazamiento y que te ayudará a <strong>Codificar</strong> y <strong>Decodificar </strong> mensajes siempre y cuando tengas en cuenta las siguientes condiciones:</p>
+        <ul class="condiciones">
+          <li> 🌟 Siempre escribir un mensaje y seleccionar un número de desplazamiento (recuerda que es el dato que "movera" las letras de tu mensaje) o no podrá hacer su trabajo.</li>
+          <li> 🌟 Por el momento sólo funciona con todas las letras mayúsculas y minúsculas a excepción de la "ñ".</li>
+        </ul><br>
+      </section>
+        <form id = "cajaCifrado" class="cajita">
+           <h3> ¡Ahora, comenzemos! </h3><br>
+            <label> Escribe tu mensaje aquí</label>
+             <input type="textarea" id="plainText" placeholder="Recuerda no usar la ñ"><br>
+            <label> Ahora selecciona el desplazamiento </label>
+             <input type="number" id="offset" min="0" max="33"> <br>
+          <label>Selecciona la acción que desees que haga</label><br>
+          <button type="button" id="encodeBtn" class="botoncito"> Codificar </button>
+          <button type="button" id= "decodeBtn" class="botoncito"> Decodificar</button><br>             
+        </form><br>
+       <section id="mensaje">
+          <label>Tu mensaje es:</label><br>
+          <br>
+          <imput type="textarea" id="tuMensajeCodificado" class="mensajeResultado"> </imput><br>
+          <button type="reset" class="botoncito" id="resetBtn">Limpiar</button>
+        </section>      
+</main>
     <script src="index.js" type="module"></script>
+    <footer class="piedpagina">
+      <section>
+    <p><small>Desarrollado por Candy López en Laboratoria, México 2022</small></p>
+      </section>
+    </footer>
   </body>
+    
 </html>

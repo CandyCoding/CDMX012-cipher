@@ -1,10 +1,23 @@
-body {
-	
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+.top {
+	font-family: 'Luxurious Roman', cursive;
+	font-size: 25px;
+    text-align: center;
+
+}
+body {	
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(334deg, #6b97f7, #7525e2, #f7137e);
 	background-size: 180% 180%;
 	animation: gradient-animation 6s ease infinite;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 @keyframes gradient-animation {
@@ -18,15 +31,70 @@ body {
 		background-position: 0% 50%;
 	}
 }
-.top {
-	font-family: 'Luxurious Roman', cursive;
-	font-size: larger;
-    text-align: center;
-
+.bienvenida {
+	font-size: 22px;
+	text-align:justify;
+	color:rgb(28, 14, 31)
+}
+.condiciones { 
+	font-size: 22px;
+	text-align: left;
+	list-style-type: square;
+	color:#d1b6d6;	
 }
 .cajita {
+	margin: auto;
+	padding:10px;
+	width: 750px;
+	height:	245px;
+	border: 3px groove #942dd4;
+	border-radius: 10pt;
+	background-color:rgb(125, 47, 140);
+	opacity: 0.8;;
     text-align: center;
-	font-family: 'PT Sans', sans-serif;
-	font-size: larger;
+	font-family:'Luxurious Roman',
+	cursive;
+	font-size:22px;
 	
+}
+.botoncito{
+	padding: 5px;
+	color: #FFF;
+  background-color: #543aa0;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow:2px 4px 4px rgb(28, 14, 31);
+  text-align: center;
+  border: 2px groove #3b3450;
+  border-radius: 5px;
+  width: 120px;
+  margin: 20px;
+}
+#mensaje{
+	padding: 5px;
+	margin: auto;
+	width: 750px;
+	height:	200px;
+	border: 2px groove  #942dd4;
+	border-radius: 10pt;
+	background-color:rgb(125, 47, 140);
+    text-align: center;
+	font-family:'Luxurious Roman', cursive;
+	font-size: 30px;
+}
+.mensajeResultado{
+
+	background-color: #b499c4;
+
+}
+
+.piedpagina{
+	text-align:center;
+	font-size:30px;
+	background-color: #f0e6f2;
+	color:rgb(28, 14, 31);
+	padding: 0rem;
+	opacity: 0.5;
+	margin-top: auto;
 }

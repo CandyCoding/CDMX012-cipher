@@ -1,9 +1,12 @@
 const cipher = {
 encode : (offset,texto) =>{
-    if(offset === 0 || texto==="") // limitamos el funcionamiento de nuestra función si se busca invocar con un argumento erroneo.
-    {throw new TypeError("Ingresa un texto y desplazamiento para cifrar");}
-    else {if (offset === null|| texto === 0)
-        {throw new TypeError("Ingresa un texto y desplazamiento para cifrar");}
+    if(offset == 0 || texto=="") // limitamos el funcionamiento de nuestra función si se busca invocar con un argumento erroneo.
+        {   alert("Sigue la primera condición o no podré ayudarte 🙃")
+            throw new TypeError("No se ingreso texto o dezplazamiento ");
+        }
+    else {if (offset == null|| texto == 0)
+        {   alert("Sigue la primera condición o no podré ayudarte 🙃 ")
+            throw new TypeError("Ingresa un texto y desplazamiento para cifrar");}
     else {
     let codedMsj= ""; // string vacía que contendra los resultados de nuestra fórmula. 
     for (let i = 0; i < texto.length; i++) { // el ciclo inicia revisando todas las letras 
@@ -23,13 +26,18 @@ encode : (offset,texto) =>{
     // ya por fin funcionó ya no le muevas porfi !!!! 
         }
     }
-},
-    //Ahora comenzamos con la función de decodificar 
+}, 
     decode : (offset,texto) => {
-        if(offset === 0 || texto==="") {throw new TypeError("Ingresa un texto y desplazamiento para descifrar");}
-        else{if (offset=== null|| texto=== 0){throw new TypeError("Ingresa un texto y desplazamento para descifrar")}
+        if(offset == 0 || texto=="")
+            {  alert("Sigue la primera condición o no podré ayudarte 🙃")
+                throw new TypeError("Ingresa un texto y desplazamiento para descifrar");}
+        else{
+                if (offset== null|| texto== 0)
+             {   alert("Sigue la primera condición o no podré ayudarte 🙃")
+                throw new TypeError("Ingresa un texto y desplazamento para descifrar")}
+
         let toDecodeMsj = "";
-        for (let i = 0; i < texto.length; i ++) {
+        for (let i = 0; i < texto.length; i ++) {       
                 let codedLetters = texto.charAt(i);
                 let letraAscii = texto.charCodeAt(i);
                     if ((letraAscii >= 65 ) && (letraAscii <= 90)){
@@ -39,7 +47,7 @@ encode : (offset,texto) =>{
                     codedLetters = String.fromCharCode((letraAscii - 122 - parseInt(offset))%26+122);
                     }
             toDecodeMsj += codedLetters;
-        }
+         }
         return toDecodeMsj;
     }
 // ya tampoco le muevas a esto!!! 
